@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     keys.addEventListener('click', e => {
         if (e.target.matches('button')) {
-          console.log('button clicked');
+          // 
         }
 
         const key = e.target
