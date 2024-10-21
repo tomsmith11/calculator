@@ -1,0 +1,130 @@
+* {
+    font-family: Arial;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    background-color: black;
+    align-items: center;
+  }
+  
+  .calc_result {
+    grid-area: calc_result;
+    border: 1px solid #cdcdcd;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .output {
+    right: 5px;
+  }
+  
+  .add {
+    background-color: #bcbcbc;
+    grid-area: add;
+  }
+  
+  .subtract {
+    background-color: #bcbcbc;
+    grid-area: subtract
+  }
+  
+  .multiply {
+    background-color: #bcbcbc;
+    grid-area: multiply;
+  }
+  
+  .divide {
+    background-color: #bcbcbc;
+    grid-area: divide;
+  }
+  
+  .seven {
+    grid-area: seven;
+  }
+  
+  .eight {
+    grid-area: eight;
+  }
+  
+  .nine {
+    grid-area: nine;
+  }
+  
+  .four {
+    grid-area: four;
+  }
+  
+  .five {
+    grid-area: five;
+  }
+  
+  .six {
+    grid-area: six;
+  }
+  
+  .one {
+    grid-area: one;
+  }
+  
+  .two {
+    grid-area: two;
+  }
+  
+  .three {
+    grid-are: three;
+  }
+  
+  .zero {
+    grid-area: zero;
+    border-radius: 0 0 0 15px;
+  }
+  
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cdcdcd;
+    transition: 0.05s;
+  }
+  
+  button:hover {
+    opacity: 100%;
+  }
+  
+  button:active {
+    filter: brightness(80%);
+  }
+  .equals {
+    background-color: orange;
+    grid-area: equals;
+    border-radius: 0 0 15px 0;
+  }
+  
+  .decimal_point {
+    grid-area: decimal_point;
+  }
+  
+  .CE {
+    grid-area: CE;
+  }
+  
+  .main_div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1.10fr repeat(5, 1fr);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    width: 65vh;
+    height: 80vh;
+    margin: 0 auto;
+    background-color: #eeeeee;
+    border-radius: 15px;
+    grid-template: 
+      "calc_result calc_result calc_result calc_result"
+      "add subtract multiply divide"
+      "seven eight nine equals"
+      "four five six equals"
+      "one two three equals"
+      "zero decimal_point CE equals";
+  }
