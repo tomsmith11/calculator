@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         action === 'divide'
       ) {
         console.log(`operator key!`);
+        key.classList.add('is-depressed')
+        // Add custom attribute
+        calculator.dataset.previousKeyType = 'operator'
       } else if (action === `decimal`) {
         console.log(`decimal key!`);
       } else if (action === `clear`) {
@@ -45,22 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    keys.addEventListener('click', e => {
-      if (e.target.matches('button')) {
-        // ...
     
-        if (
-          action === 'add' ||
-          action === 'subtract' ||
-          action === 'multiply' ||
-          action === 'divide'
-        ) {
-          key.classList.add('is-depressed')
-          // Add custom attribute
-          calculator.dataset.previousKeyType = 'operator'
-        }
-      }
-    })
 
   })
 })
