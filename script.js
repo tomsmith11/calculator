@@ -25,5 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`equal key!`)
       }
     }
+
+    if (!action) {
+      if (display.textContent === '0') {
+        display.textContent = key.textContent
+      } else {
+        display.textContent += key.textContent
+      }
+    }
   })
 })
