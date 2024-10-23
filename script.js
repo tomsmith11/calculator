@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let operator = '';
 
   keys.addEventListener('click', e => {
+    console.log('Calculation Process:', e.target, e.target.dataset.action, calculator.dataset.previousKeyType);
     const key = e.target;
     const action = key.dataset.action;
     const previousKeyType = calculator.dataset.previousKeyType;
@@ -62,5 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
         Array.from(keys.children).forEach(k => k.classList.remove('is-depressed')); // Remove 'is-depressed' class from all keys
       }
     }
+    console.log('Updated Display:', display.textContent);
+    console.log('Previous Result:', previousResult);
+    console.log('Operator:', operator);
   });
 });
