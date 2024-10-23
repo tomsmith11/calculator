@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`decimal key!`);
       } else if (action === `clear`) {
         console.log(`clear key!`)
+        display.textContent = '0'
       } else if (action === 'calculate') {
         console.log(`equal key!`)
       }
