@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   keys.addEventListener('click', e => {
     const key = e.target
     const action = key.dataset.action
+    const previousKeyType = calculator.dataset.previousKeyType
+
+    
 
     if (e.target.matches('button')) {
       if (!action) {
@@ -33,5 +36,31 @@ document.addEventListener('DOMContentLoaded', () => {
         display.textContent += key.textContent
       }
     }
+
+    if (!action) {
+      if (displayedNum === '0' || previousKeyType === 'operator') {
+        display.textContent = keyContent
+      } else {
+        display.textContent = displayedNum + keyContent
+      }
+    }
+
+    keys.addEventListener('click', e => {
+      if (e.target.matches('button')) {
+        // ...
+    
+        if (
+          action === 'add' ||
+          action === 'subtract' ||
+          action === 'multiply' ||
+          action === 'divide'
+        ) {
+          key.classList.add('is-depressed')
+          // Add custom attribute
+          calculator.dataset.previousKeyType = 'operator'
+        }
+      }
+    })
+
   })
 })
