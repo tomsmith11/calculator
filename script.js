@@ -33,8 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+
     if (!action) {
-      if (display.textContent === '0') {
+      if (display.textContent === '0' || previousKeyType === 'operator') {
         display.textContent = key.textContent
       } else {
         display.textContent += key.textContent
