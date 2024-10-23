@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const action = key.dataset.action
     const previousKeyType = calculator.dataset.previousKeyType
 
-    
-
     if (e.target.matches('button')) {
       if (!action) {
+        
         console.log('number key!')
+        
       } else if (
         action === 'add' ||
         action === 'subtract' ||
@@ -41,14 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (!action) {
-      if (displayedNum === '0' || previousKeyType === 'operator') {
-        display.textContent = keyContent
-      } else {
-        display.textContent = displayedNum + keyContent
-      }
+      
     }
-
-    
-
+  // 
   })
 })
