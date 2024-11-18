@@ -1,3 +1,10 @@
+// READ
+// i am making this file to simplify the process of making the calculator with the html calculator. this is purely 
+// a console-based calculator to help me understand how mine should actually work
+// i heavily inspired script.js with this file however everything in script.js I now find quite confusing
+
+
+
 
 // declare default number value 
 
