@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let operator = '';
 
   keys.addEventListener('click', e => {
-    console.log('Calculation Process:', e.target, e.target.dataset.action, calculator.dataset.previousKeyType);
     const key = e.target;
     const action = key.dataset.action;
     const previousKeyType = calculator.dataset.previousKeyType;
